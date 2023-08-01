@@ -11,29 +11,44 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Installation
 
-## Features
+1. Add the latest version of package to your pubspec.yaml (and run dart pub get)
+dependencies:
+    simple_container: ^0.0.1
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+2. Import the package and use it in your Flutter App
 
-## Getting started
+Import 'package:very_simple_container/simple_container';
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Example
+There are a number of properties that you can modify:
 
-## Usage
+- width
+- height
+- title
+- subtitle
+- gradient (color1 and color2)
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+<hr>
+<table>
+<tr>
+<td>
 
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+class SimpleScreen extends StatelessWidget {
+  const SimpleScreen({key? key}) : super(Key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: const SimpleContainer(
+            title: 'Hello World',
+            color1: Colors.lightGreenAccent,
+            color2: Colors.lightBlue,
+            subtitle: 'This is a new package,
+        ),
+      )
+    );
+  }
+}

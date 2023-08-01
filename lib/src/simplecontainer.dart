@@ -59,7 +59,7 @@ class _SimpleContainerState extends State<SimpleContainer> {
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: Text(
-              '${widget.title}',
+              widget.title,
               style: TextStyle(
                 color: widget.textcolor,
                 fontSize: 20.0,
@@ -70,7 +70,7 @@ class _SimpleContainerState extends State<SimpleContainer> {
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: Text(
-              '${widget.subtitle}',
+              widget.subtitle,
               style: TextStyle(
                 color: widget.subtitlecolor,
                 fontSize: 15.0,
